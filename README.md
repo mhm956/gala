@@ -8,4 +8,10 @@ Goal: To build a voice controlled personal assistant using [API.AI](https://api.
 ```
 $ apt install python-pyaudio python-numpy
 $ pip install apiai
+
+TODO: Add step to place client key
+```
+2) Install phue
+```
+$ pip install phue
 ```

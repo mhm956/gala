@@ -36,7 +36,7 @@ def main():
     )
 
     user_entities_response = user_entities_request.getresponse()
-
+    print '\n---------------Upload User Entities---------------------------\n'
     print 'Upload user entities response: ', (user_entities_response.read())
 
     request = ai.text_request()
@@ -45,7 +45,7 @@ def main():
     request.query = "Open application Firefox"
 
     response = request.getresponse()
-
+    print '\n----------------Query Response--------------------------------\n'
     print 'Query response: ', (response.read())
 
 

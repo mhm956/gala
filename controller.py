@@ -6,6 +6,8 @@ import sys
 import json
 import socket
 
+from Amazon.examples.Polly_test.polly_example import VoiceSynthesizer
+
 try:
     import apiai
 except ImportError:
@@ -21,6 +23,8 @@ except ImportError:
 
 # personal agent access token: 470a48429715494cbb1cf8c6080bf0e6
 CLIENT_ACCESS_TOKEN = '470a48429715494cbb1cf8c6080bf0e6'
+
+voice_synth = VoiceSynthesizer()
 
 
 def main():
@@ -54,6 +58,7 @@ def main():
                     actionIncomplete = result.get('actionIncomplete', False)
 
                     print(u"<--> %s" % response['result']['fulfillment']['speech'])
+                    voice_synth.say(response['result']['fulfillment']['speech'])
 
                 else:
                     break

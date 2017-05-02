@@ -23,6 +23,7 @@ class VoiceSynthesizer(object):
 
     def _synthesize(self, text):
         # Implementation specific synthesis
+        global response
         try:
             # Request speech synthesis
             response = self.__polly.synthesize_speech(Text=text,
@@ -50,6 +51,6 @@ class VoiceSynthesizer(object):
                 time.sleep(5)
 
 
-if __name__ == '__main__':
-    voice_out = VoiceSynthesizer()
-    voice_out.say('Hello, My name is Joanna. It is nice to meet you')
+# if __name__ == '__main__':
+#     voice_out = VoiceSynthesizer()
+#     voice_out.say('Hello, My name is Joanna. It is nice to meet you')

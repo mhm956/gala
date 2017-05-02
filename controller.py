@@ -3,7 +3,7 @@ from __future__ import print_function
 import os
 import sys
 import json
-import socketserver
+from socket import socket
 
 try:
     import apiai
@@ -20,17 +20,22 @@ except ImportError:
 
 # personal agent access token: 470a48429715494cbb1cf8c6080bf0e6
 CLIENT_ACCESS_TOKEN = '470a48429715494cbb1cf8c6080bf0e6'
-data_string = ""
+
+sock = socket()
+sock.connect(('localhost', 5987))
 
 
-class TCPHandler(socketserver.BaseRequestHandler):
-    def handle(self):
-        # self.request is the TCP socket connected to the client
-        self.data = self.request.recv(1024).strip()
-        global data_string
-        data_string = self.request.recv(1024).strip()
-        # print("{} wrote:".format(self.client_address[0]))
-        return self.data
+def readlines(sock, recv_buffer=1024, delim='\n'):
+    buffering = ''
+    data = True
+    while data:
+        data = sock.recv(recv_buffer)
+        buffering += data
+
+        while buffering.find(delim) != -1:
+            line, buffering = buffering.split('\n', 1)
+            yield line
+    return
 
 
 def main():
@@ -40,21 +45,23 @@ def main():
         # print(u"--> ", end=u"")
         # TODO plug in client here
         # user_message = raw_input()
-        user_message = data_string
+        for line in readlines(sock):
+            user_message = line
 
-        if user_message == u"exit":
-            break
+            if user_message == u"exit":
+                break
 
-        request = ai.text_request()
-        request.query = user_message
+            request = ai.text_request()
+            request.query = user_message
 
-        response = json.loads(request.getresponse().read())
+            response = json.loads(request.getresponse().read())
 
-        result = response['result']
-        action = result.get('action')
-        actionIncomplete = result.get('actionIncomplete', False)
+            result = response['result']
+            action = result.get('action')
+            actionIncomplete = result.get('actionIncomplete', False)
 
-        print(u"<--> %s" % response['result']['fulfillment']['speech'])
+            print(u"<--> %s" % response['result']['fulfillment']['speech'])
+
 
 if __name__ == '__main__':
     HOST, PORT = "localhost", 9999

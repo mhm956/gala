@@ -1,9 +1,10 @@
+# Server tutorial: https://pymotw.com/2/socket/tcp.html
 from __future__ import print_function
 
 import os
 import sys
 import json
-from socket import socket
+import socket
 
 try:
     import apiai
@@ -21,52 +22,45 @@ except ImportError:
 # personal agent access token: 470a48429715494cbb1cf8c6080bf0e6
 CLIENT_ACCESS_TOKEN = '470a48429715494cbb1cf8c6080bf0e6'
 
-sock = socket()
-sock.connect(('localhost', 5987))
-
-
-def readlines(sock, recv_buffer=1024, delim='\n'):
-    buffering = ''
-    data = True
-    while data:
-        data = sock.recv(recv_buffer)
-        buffering += data
-
-        while buffering.find(delim) != -1:
-            line, buffering = buffering.split('\n', 1)
-            yield line
-    return
-
 
 def main():
     ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN)
 
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server_address = ('localhost', 10000)
+    print('starting up on %s port %s', server_address)
+    sock.bind(server_address)
+    sock.listen(1)
     while True:
-        # print(u"--> ", end=u"")
-        # TODO plug in client here
-        # user_message = raw_input()
-        for line in readlines(sock):
-            user_message = line
+        print('waiting for a connection')
+        connection, client_address = sock.accept()
+        try:
+            print('connection from %s', client_address)
+            while True:
+                data = connection.recv(1024)
+                if data:
+                    user_message = data
 
-            if user_message == u"exit":
-                break
+                    if user_message == u"exit":
+                        break
 
-            request = ai.text_request()
-            request.query = user_message
+                    request = ai.text_request()
+                    request.query = user_message
 
-            response = json.loads(request.getresponse().read())
+                    response = json.loads(request.getresponse().read())
 
-            result = response['result']
-            action = result.get('action')
-            actionIncomplete = result.get('actionIncomplete', False)
+                    result = response['result']
+                    action = result.get('action')
+                    actionIncomplete = result.get('actionIncomplete', False)
 
-            print(u"<--> %s" % response['result']['fulfillment']['speech'])
+                    print(u"<--> %s" % response['result']['fulfillment']['speech'])
+
+                else:
+                    break
+        finally:
+            # Clean up the connection
+            connection.close()
 
 
 if __name__ == '__main__':
-    HOST, PORT = "localhost", 9999
-    server = socketserver.TCPServer((HOST, PORT), TCPHandler)
-    print('Going to forever')
-    server.serve_forever()
-    print('Going to main')
     main()

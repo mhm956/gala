@@ -1,7 +1,7 @@
 'use strict';
 
 let net = require('net-socket');
-let socket = net.connect(5987, 'localhost');
+let socket = net.connect(10000, 'localhost');
 const ROOT_DIR = __dirname + '/node_modules/sonus/';
 
 const Sonus = require(ROOT_DIR + 'index.js');

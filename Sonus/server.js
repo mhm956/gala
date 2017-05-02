@@ -4,7 +4,7 @@ const ROOT_DIR = __dirname + '/node_modules/sonus/';
 const Sonus = require(ROOT_DIR + 'index.js');
 const speech = require('@google-cloud/speech')({
   projectId: 'streaming-speech-sample',
-  keyFilename: ROOT_DIR + 'keyfile.json'
+  keyFilename: __dirname + '/keyfile.json'
 });
 
 const hotwords = [{ file: ROOT_DIR + 'resources/sonus.pmdl', hotword: 'sonus' }];

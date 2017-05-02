@@ -28,11 +28,11 @@ def main():
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_address = ('localhost', 10000)
-    print('starting up on %s port %s', server_address)
+    print('---> Starting up on', server_address[0], 'port', server_address[1])
     sock.bind(server_address)
     sock.listen(1)
     while True:
-        print('waiting for a connection')
+        print('---> Waiting for a connection')
         connection, client_address = sock.accept()
         try:
             print('connection from %s', client_address)

@@ -9,7 +9,7 @@ from contextlib import closing
 
 
 class VoiceSynthesizer(object):
-    def __init__(self, volume=0.1):
+    def __init__(self, volume=1):
         pygame.mixer.init()
         self._volume = volume
         session = Session(profile_name="default")

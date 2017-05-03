@@ -1,12 +1,12 @@
 # Server tutorial: https://pymotw.com/2/socket/tcp.html
 from __future__ import print_function
 
-import os
-import sys
 import json
+import os
 import socket
+import sys
 
-from Amazon.examples.Polly_test.polly_example import VoiceSynthesizer
+from Amazon.polly import VoiceSynthesizer
 
 try:
     import apiai

@@ -1,5 +1,8 @@
 'use strict';
 
+
+let Sound = require('node-aplay');
+
 let net = require('net-socket');
 let socket = net.connect(10000, 'localhost');
 const ROOT_DIR = __dirname + '/node_modules/sonus/';
@@ -9,7 +12,7 @@ const speech = require('@google-cloud/speech')({
     projectId: 'streaming-speech-sample',
     keyFilename: __dirname + '/keyfile.json'
 });
-const hotwords = [{file: ROOT_DIR + 'resources/sonus.pmdl', hotword: 'sonus'}];
+const hotwords = [{file: __dirname + '/Gala.pmdl', hotword: 'GALA'}];
 
 const language = "en-US";
 //recordProgram can also be 'arecord' which works much better on the Pi and low power devices
@@ -26,7 +29,10 @@ Sonus.start(sonus);
 console.log('Say "' + hotwords[0].hotword + '"...');
 
 // Waits till hotword is spoken
-sonus.on('hotword', (index, keyword) => console.log("!" + keyword));
+sonus.on('hotword', (index, keyword) => {
+    new Sound(__dirname + '/ding.wav').play();
+    console.log("!" + keyword)
+});
 
 // When google passes partial result:
 sonus.on('partial-result', result => console.log("Partial", result));

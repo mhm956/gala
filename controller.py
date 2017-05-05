@@ -70,12 +70,12 @@ def main():
                             light_state = parameters['light_state']
                             room = parameters['room']
                             light_result = phue_lights(color, light_state, room)
-                            sleep(2)  # Let GALA finish talking
                             if light_result:
-                                print("ok, all done!")
+                                voice_synth.say("ok, all done!")
+                                sleep(2)  # Let GALA finish talking
                             else:
-                                print("sorry, couldn't set the lights")
-
+                                voice_synth.say("sorry, couldn't set the lights")
+                                sleep(2)  # Let GALA finish talking
                 else:
                     break
         finally:

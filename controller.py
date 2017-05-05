@@ -5,6 +5,8 @@ import json
 import os
 import socket
 import sys
+from time import sleep
+from Phillips.smart_lights import phue_lights
 
 from Amazon.polly import VoiceSynthesizer
 
@@ -59,6 +61,20 @@ def main():
 
                     print(u"<--> %s" % response['result']['fulfillment']['speech'])
                     voice_synth.say(response['result']['fulfillment']['speech'])
+
+                    if action is not None:
+                        parameters = result['parameters']
+
+                        if action == u"smart-light-action":
+                            color = parameters['color']
+                            light_state = parameters['light_state']
+                            room = parameters['room']
+                            light_result = phue_lights(color, light_state, room)
+                            sleep(2)  # Let GALA finish talking
+                            if light_result:
+                                print("ok, all done!")
+                            else:
+                                print("sorry, couldn't set the lights")
 
                 else:
                     break

@@ -17,7 +17,7 @@ const hotwords = [{file: __dirname + '/Wake_up.pmdl', hotword: 'Wake Up'}];
 
 const language = "en-US";
 //recordProgram can also be 'arecord' which works much better on the Pi and low power devices
-const sonus = Sonus.init({hotwords, language, recordProgram: "rec"}, speech);
+const sonus = Sonus.init({hotwords, language, recordProgram: "arecord"}, speech);
 
 // Set and turn on the net socket.
 socket.setEncoding('utf8');

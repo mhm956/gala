@@ -3,7 +3,14 @@
 
 Goal: To build a voice controlled personal assistant using [API.AI](https://api.ai)
 
-#### Setup
+#### Setup Automated
+cd $PROJECT_DIR
+./install.sh (you will need root permissions)
+
+
+#### Setup Manual
+Pre-build -- TODO: Make instruction on setting up user accounts for amazon and google
+
 1) Install [API.AI](https://api.ai)
 ```
 $ sudo apt install python-pyaudio python-numpy
@@ -35,4 +42,10 @@ $ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add 
 $ sudo apt-get update && sudo apt-get install google-cloud-sdk
 $ sudo apt-get install google-cloud-sdk-app-engine-python google-cloud-sdk-app-engine-java
 $ gcloud init
+```
+6) Install Amazon Polly
+Replace USER_NAME with your own.
+```
+sudo pip install awscli --upgrade --user USER_NAME
+sudo pip install boto
 ```

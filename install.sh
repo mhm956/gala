@@ -10,9 +10,11 @@ sudo apt install python python-pyaudio python-numpy python-pip \
 sudo apt install -f npm
 
 # Amazon Polly
-# Replace "taylor" with your user name
-sudo pip install awscli --upgrade --user taylor
-sudo pip install boto
+# Replace "taylor" with your user namea
+sudo apt install awscli
+aws configure
+sudo pip install awscli --upgrade
+sudo pip install boto boto3
 
 # API.AI Python API
 sudo pip install apiai
@@ -33,9 +35,12 @@ sudo pip install phue
 
 # Sonus
 sudo apt install sox libsox-fmt-all
-mkdir sonus && cd sonus
+sudo apt install libatlas-base-dev
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt install nodejs
+cd Sonus
 sudo npm install npm --global
 npm install --save sonus
+npm install node-aplay
+npm install net-socket
 cd ../

@@ -41,6 +41,7 @@ class VoiceSynthesizer(object):
             with closing(response["AudioStream"]) as stream:
                 data = stream.read()
                 filelike = StringIO.StringIO(data)  # Gives you a file-like object
+                print(filelike)
                 sound = pygame.mixer.Sound(file=filelike)
                 sound.set_volume(self._getVolume())
                 sound.play()

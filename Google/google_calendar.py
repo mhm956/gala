@@ -57,7 +57,7 @@ def get_event_time(events):
     for event in events:
         start = event['start'].get('dateTime', event['start'].get('date'))
         start_time = dateutil.parser.parse(start)
-        event_time_string = "On the " + str(start_time.strftime('%A')) + ", you have " + event['summary'] + " at " + \
+        event_time_string = "On " + str(start_time.strftime('%A')) + ", you have " + event['summary'] + " at " + \
                             str(start_time.strftime('%-I')) + ":" + str(start_time.strftime('%M'))
         event_list.append(event_time_string)
 

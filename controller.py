@@ -8,7 +8,7 @@ import sys
 from time import sleep
 from Phillips.smart_lights import phue_lights
 from Google.gmaps import gmaps
-from Google.calendar import gcal
+from Google.google_calendar import gcal
 
 from Amazon.polly import VoiceSynthesizer
 

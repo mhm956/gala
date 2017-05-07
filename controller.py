@@ -7,6 +7,7 @@ import socket
 import sys
 from time import sleep
 from Phillips.smart_lights import phue_lights
+from Google.gmaps import gmaps
 
 from Amazon.polly import VoiceSynthesizer
 
@@ -76,6 +77,18 @@ def main():
                             else:
                                 voice_synth.say("sorry, couldn't set the lights")
                                 sleep(2)  # Let GALA finish talking
+                        elif action == u"travel-time":
+                            location = parameters['location']
+                            route_time = gmaps(location)
+                            if route_time:
+                                voice_synth.say("Currently your route time to")
+                                voice_synth.say(location)
+                                voice_synth.say("with traffic is")
+                                voice_synth.say(route_time)
+                                sleep(3)
+                            else:
+                                voice_synth.say("Sorry I couldn't find that route")
+                                sleep(2)
                 else:
                     break
         finally:

@@ -99,14 +99,9 @@ def main():
                                 voice_synth.say("I couldn't find any upcoming events in your calendar")
                         elif action == u"bed-time-story":
                             story = bedtime_story()
-<<<<<<< HEAD
                             for story_part in story.values():
                                 voice_synth.say(story_part)
 				sleep(30)
-=======
-                            for story_part in story:
-                                voice_synth.say(story_part[0])
->>>>>>> 87b6fae6d1afc567965d8bdb3a53825db54c55df
                             voice_synth.say("The End")
 
                 else:

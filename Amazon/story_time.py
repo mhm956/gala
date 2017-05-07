@@ -8,6 +8,7 @@ and said:
 'Little pig, little pig, let me come in.' To which the pig answered:
 'No, no, by the hair of my chiny chin chin.' The wolf then answered to that:
 'Then I'll huff, and I'll puff, and I'll blow your house in.'
+"""
 # So he huffed, and he puffed, and he blew his house in, and ate up the little pig.
 # The second little pig met a man with a bundle of furze and said:
 # 'Please, man, give me that furze to build a house.'
@@ -61,5 +62,5 @@ and said:
 # chimney after him. When the little pig saw what he was about, he hung on the pot full of water, and made up a blazing
 # fire, and, just as the wolf was coming down, took off the cover, and in fell the wolf; so the little pig put on the
 # cover again in an instant, boiled him up, and ate him for supper, and lived happy ever afterwards."
-"""
+# """
     return story

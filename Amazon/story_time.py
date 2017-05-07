@@ -30,9 +30,7 @@ def bedtime_story():
     'No, no, by the hair of my chiny chin chin.'
     'Then I'll huff, and I'll puff, and I'll blow your house in.'
     Well, he huffed, and he puffed, and he huffed and he puffed, and he puffed and huffed; but he could not get the house
-    down. When he found that he could not, with all his huffing and puffing, blow the house down, he said:
-    'Little pig, I know where there is a nice field of turnips.'
-    'Where?' said the little pig.
+    down. When he found that he could not, with all his huffing and puffing, blow the house down
     """
     part4 = """
     he said: 'Little pig, I know where there is a nice field of turnips.'
@@ -44,12 +42,12 @@ def bedtime_story():
     Well, the little pig got up at five, and got the turnips before the wolf came (which he did about six), who said:
     'Little pig, are you ready?'
     The little pig said: 'Ready! I have been and come back again, and got a nice potful for dinner.'
-    The wolf felt very angry at this, but thought that he would be up to the little pig somehow or other, so he said:
-    'Little pig, I know where there is a nice apple tree.'
-    'Where?' said the pig.
     """
 
     part5 = """
+    The wolf felt very angry at this, but thought that he would be up to the little pig somehow or other, so he said:
+    'Little pig, I know where there is a nice apple tree.'
+    'Where?' said the pig.
     'Little pig, I know where there is a nice apple tree.'
     'Where?' said the pig.
     'Down at Merry-garden,' replied the wolf, 'and if you will not deceive me I will come for you at five o'clock
@@ -57,10 +55,10 @@ def bedtime_story():
     Well, the little pig bustled up the next morning at four o'clock, and went off for the apples, hoping to get back
     before the wolf came; but he had further to go, and had to climb the tree, so that just as he was coming down from
     it, he saw the wolf coming, which, as you may suppose, frightened him very much. When the wolf came up he said:
-    'Little pig, what! are you here before me? Are they nice apples?'
-    'Yes, very,' said the little pig. 'I will throw you down one.'
     """
     part6 = """
+    'Little pig, what! are you here before me? Are they nice apples?'
+    'Yes, very,' said the little pig. 'I will throw you down one.'
     And he threw it so far, that, while the wolf was gone to pick it up, the little pig jumped down and ran home. The
     next day the wolf came again, and said to the little pig:
     'Little pig, there is a fair at Shanklin this afternoon, will you go?'

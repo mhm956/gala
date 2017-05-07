@@ -80,8 +80,8 @@ def main():
                                 sleep(2)  # Let GALA finish talking
                         elif action == u"travel-time":
                             location = parameters['location']
-                            route_time = gmaps(location)
-                            if route_time:
+                            if location:
+                                route_time = gmaps(location)
                                 route_string = "Currently your route time to " + location + " with traffic is " + \
                                                route_time
                                 voice_synth.say(route_string)

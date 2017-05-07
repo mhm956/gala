@@ -77,7 +77,7 @@ def bedtime_story():
     """
     part8 = """
     fire, and, just as the wolf was coming down, took off the cover, and in fell the wolf; so the little pig put on the
-    cover again in an instant, boiled him up, and ate him for supper, and lived happy ever afterwards."
+    cover again in an instant, boiled him up, and ate him for supper, and lived happy ever afterwards. The end."
     """
     return {'part1': part1, 'part2': part2, 'part3': part3, 'part4': part4, 'part5': part5, 'part6': part6,
             'part7': part7, 'part8': part8}

@@ -101,8 +101,7 @@ def main():
                             story = bedtime_story()
                             for story_part in story.values():
                                 voice_synth.say(story_part)
-				sleep(30)
-                            voice_synth.say("The End")
+                                sleep(30)
 
                 else:
                     break

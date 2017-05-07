@@ -38,6 +38,12 @@ def phue_lights(color=None, light_state=None, room=None):
             elif color == 'green':
                 b.set_light(uuid, 'hue', 22500)
                 action_flag = True
+            elif color == 'yellow':
+                b.set_light(uuid, 'hue', 17000)
+                action_flag = True
+            elif color == 'purple':
+                b.set_light(uuid, 'hue', 54000)
+                action_flag = True
             else:
                 pass
 

@@ -12,11 +12,8 @@ const speech = require('@google-cloud/speech')({
     projectId: 'streaming-speech-sample',
     keyFilename: __dirname + '/keyfile.json'
 });
-const hotwords = [{file: __dirname + '/Wake_up.pmdl', hotword: 'Wake Up'}];
-// const hotwords = [{file: ROOT_DIR + 'resources/sonus.pmdl', hotword: 'sonus'}];
-
+const hotwords = [{file: ROOT_DIR + 'resources/sonus.pmdl', hotword: 'sonus'}];
 const language = "en-US";
-//recordProgram can also be 'arecord' which works much better on the Pi and low power devices
 const sonus = Sonus.init({hotwords, language, recordProgram: "arecord"}, speech);
 
 // Set and turn on the net socket.

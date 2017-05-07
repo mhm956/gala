@@ -53,10 +53,10 @@ def bedtime_story():
     Well, the little pig bustled up the next morning at four o'clock, and went off for the apples, hoping to get back
     before the wolf came; but he had further to go, and had to climb the tree, so that just as he was coming down from
     it, he saw the wolf coming, which, as you may suppose, frightened him very much. When the wolf came up he said:
-    'Little pig, what! are you here before me? Are they nice apples?'
-    'Yes, very,' said the little pig. 'I will throw you down one.'
     """
     part6 = """
+    'Little pig, what! are you here before me? Are they nice apples?'
+    'Yes, very,' said the little pig. 'I will throw you down one.'
     And he threw it so far, that, while the wolf was gone to pick it up, the little pig jumped down and ran home. The
     next day the wolf came again, and said to the little pig:
     'Little pig, there is a fair at Shanklin this afternoon, will you go?'
@@ -64,11 +64,11 @@ def bedtime_story():
     'At three,' said the wolf. So the little pig went off before the time as usual, and got to the fair, and bought a
     butter-churn, which he was going home with, when he saw the wolf coming. Then he could not tell what to do. So he got
     into the churn to hide, and by so doing turned it round, and it rolled down the hill with the pig in it,
+    """
+    part7 = """
     which frightened the wolf so much, that he ran home without going to the fair. He went to the little pig's house,
     and told him how frightened he had been by a great round thing which came down the hill past him. Then the little pig
     said:
-    """
-    part7 = """
     'Hah, I frightened you, then. I had been to the fair and bought a butter-churn, and when I saw you, I got into it,
     and rolled down the hill.'
     Then the wolf was very angry indeed, and declared he would eat up the little pig, and that he would get down the

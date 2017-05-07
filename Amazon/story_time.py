@@ -62,10 +62,11 @@ def bedtime_story():
     'Little pig, there is a fair at Shanklin this afternoon, will you go?'
     'Oh yes,' said the pig, 'I will go; what time shall you be ready?'
     'At three,' said the wolf. So the little pig went off before the time as usual, and got to the fair, and bought a
-    butter-churn, which he was going home with, when he saw the wolf coming. Then he could not tell what to do. So he got
-    into the churn to hide, and by so doing turned it round, and it rolled down the hill with the pig in it,
+    butter-churn, which he was going home with, when he saw the wolf coming. Then he could not tell what to do.
     """
     part7 = """
+    So he got
+    into the churn to hide, and by so doing turned it round, and it rolled down the hill with the pig in it,
     which frightened the wolf so much, that he ran home without going to the fair. He went to the little pig's house,
     and told him how frightened he had been by a great round thing which came down the hill past him. Then the little pig
     said:
@@ -73,8 +74,10 @@ def bedtime_story():
     and rolled down the hill.'
     Then the wolf was very angry indeed, and declared he would eat up the little pig, and that he would get down the
     chimney after him. When the little pig saw what he was about, he hung on the pot full of water, and made up a blazing
+    """
+    part8 = """
     fire, and, just as the wolf was coming down, took off the cover, and in fell the wolf; so the little pig put on the
     cover again in an instant, boiled him up, and ate him for supper, and lived happy ever afterwards."
     """
     return {'part1': part1, 'part2': part2, 'part3': part3, 'part4': part4, 'part5': part5, 'part6': part6,
-            'part7': part7}
+            'part7': part7, 'part8': part8}

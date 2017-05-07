@@ -93,8 +93,10 @@ def main():
                         elif action == u"calendar":
                             calendar_events = gcal()
                             if calendar_events:
+                                voice_synth.say("Here are your upcoming events")
                                 for event in calendar_events:
                                     voice_synth.say(event)
+                                voice_synth.say("Finished events")
                             else:
                                 voice_synth.say("I couldn't find any upcoming events in your calendar")
                         elif action == u"bed-time-story":

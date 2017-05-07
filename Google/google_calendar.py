@@ -75,7 +75,7 @@ def gcal():
     service = discovery.build('calendar', 'v3', http=http)
 
     now = datetime.datetime.utcnow().isoformat() + 'Z' # 'Z' indicates UTC time
-    tomorrow = datetime.datetime.utcnow() + datetime.timedelta(days=2)
+    tomorrow = datetime.datetime.utcnow() + datetime.timedelta(days=1)
     tomorrow_formatted = tomorrow.isoformat("T") + "Z"
     eventsResult = service.events().list(
         calendarId='primary', timeMin=now, timeMax=tomorrow_formatted, maxResults=10, singleEvents=True,

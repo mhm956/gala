@@ -9,6 +9,7 @@ from time import sleep
 from Phillips.smart_lights import phue_lights
 from Google.gmaps import gmaps
 from Google.google_calendar import gcal
+from Amazon.story_time import bedtime_story
 
 from Amazon.polly import VoiceSynthesizer
 
@@ -96,6 +97,10 @@ def main():
                                     voice_synth.say(event)
                             else:
                                 voice_synth.say("I couldn't find any upcoming events in your calendar")
+                        elif action == u"bed-time-story":
+                            story = bedtime_story()
+                            voice_synth.say(story)
+
                 else:
                     break
         finally:

@@ -35,6 +35,8 @@ def bedtime_story():
     'Where?' said the little pig.
     """
     part4 = """
+    he said: 'Little pig, I know where there is a nice field of turnips.'
+    'Where?' said the little pig.
     'Oh, in Mr Smith's Home-field, and if you will be ready tomorrow morning I will call for you, and we will go
     together, and get some for dinner.'
     'Very well,' said the little pig, 'I will be ready. What time do you mean to go?'
@@ -48,6 +50,8 @@ def bedtime_story():
     """
 
     part5 = """
+    'Little pig, I know where there is a nice apple tree.'
+    'Where?' said the pig.
     'Down at Merry-garden,' replied the wolf, 'and if you will not deceive me I will come for you at five o'clock
     tomorrow. and get some apples.'
     Well, the little pig bustled up the next morning at four o'clock, and went off for the apples, hoping to get back
@@ -55,11 +59,11 @@ def bedtime_story():
     it, he saw the wolf coming, which, as you may suppose, frightened him very much. When the wolf came up he said:
     'Little pig, what! are you here before me? Are they nice apples?'
     'Yes, very,' said the little pig. 'I will throw you down one.'
+    """
+    part6 = """
     And he threw it so far, that, while the wolf was gone to pick it up, the little pig jumped down and ran home. The
     next day the wolf came again, and said to the little pig:
     'Little pig, there is a fair at Shanklin this afternoon, will you go?'
-    """
-    part6 = """
     'Oh yes,' said the pig, 'I will go; what time shall you be ready?'
     'At three,' said the wolf. So the little pig went off before the time as usual, and got to the fair, and bought a
     butter-churn, which he was going home with, when he saw the wolf coming. Then he could not tell what to do. So he got

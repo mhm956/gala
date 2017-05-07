@@ -9,7 +9,6 @@ b = Bridge('192.168.0.103')
 def phue_lights(color=None, light_state=None, room=None):
     action_flag = False
     if room:
-        print(light_state)
         uuid = int(b.get_light_id_by_name(room))
         if light_state == "on":
             b.set_light(uuid, 'on', True)

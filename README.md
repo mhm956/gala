@@ -49,3 +49,11 @@ Replace USER_NAME with your own.
 sudo pip install awscli --upgrade --user USER_NAME
 sudo pip install boto
 ```
+
+7) Edit ~/.aconfig 
+TODO
+
+8) Install Google Maps
+```
+pip install googlemaps
+```

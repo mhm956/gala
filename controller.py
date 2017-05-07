@@ -8,6 +8,7 @@ import sys
 from time import sleep
 from Phillips.smart_lights import phue_lights
 from Google.gmaps import gmaps
+from Google.calendar import gcal
 
 from Amazon.polly import VoiceSynthesizer
 
@@ -88,6 +89,13 @@ def main():
                             else:
                                 voice_synth.say("Sorry I couldn't find that route")
                                 sleep(2)
+                        elif action == u"calendar":
+                            calendar_events = gcal()
+                            if calendar_events:
+                                for event in calendar_events:
+                                    voice_synth.say(event)
+                            else:
+                                voice_synth.say("I couldn't find any upcoming events in your calendar")
                 else:
                     break
         finally:

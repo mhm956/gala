@@ -56,4 +56,14 @@ TODO
 8) Install Google Maps
 ```
 pip install googlemaps
+pip install --upgrade google-api-python-client
 ```
+
+9) Google Calendar
+```
+pip install pytz
+```
+- Download the OAUTH Key from [Google's](https://console.cloud.google.com/apis/) credential page.
+- Save the JSON to your working directory.
+- Run the calandar_example in <b>the same directory as the JSON file</b>
+-- This only has to be done once on a new machine because the security is saved.

@@ -1,3 +1,5 @@
+dateutil
+apiclient
 googlemaps
 alabaster==0.7.7
 apiai==1.2.3

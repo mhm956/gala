@@ -99,7 +99,9 @@ def main():
                                 voice_synth.say("I couldn't find any upcoming events in your calendar")
                         elif action == u"bed-time-story":
                             story = bedtime_story()
-                            voice_synth.say(story)
+                            for story_part in story:
+                                voice_synth.say(story_part)
+                            voice_synth.say("The End")
 
                 else:
                     break

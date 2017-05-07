@@ -100,7 +100,7 @@ def main():
                         elif action == u"bed-time-story":
                             story = bedtime_story()
                             for story_part in story:
-                                voice_synth.say(story_part)
+                                voice_synth.say(story_part[0])
                             voice_synth.say("The End")
 
                 else:

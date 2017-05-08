@@ -1,6 +1,6 @@
 from phue import Bridge
 
-b = Bridge('192.168.0.103')
+b = Bridge('192.168.1.147')
 
 # If running for the first time, press button on bridge and run with b.connect() uncommented
 # b.connect()

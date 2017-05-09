@@ -49,8 +49,3 @@ class VoiceSynthesizer(object):
                 sound.play()
 
                 time.sleep(5)
-
-
-# if __name__ == '__main__':
-#     voice_out = VoiceSynthesizer()
-#     voice_out.say('Hello, My name is Joanna. It is nice to meet you')

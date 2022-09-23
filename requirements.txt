@@ -72,7 +72,7 @@ Pillow==3.1.2
 piston-mini-client==0.7.5
 ply==3.8
 proto-google-cloud-speech-v1==0.15.3
-protobuf==3.2.0
+protobuf==3.18.3
 ptyprocess==0.5
 pyasn1==0.2.3
 pyasn1-modules==0.0.8
